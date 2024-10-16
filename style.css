@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #7ebed8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* changed from height */
+  margin: 0; /* added to remove any default body margin */
+}
+
+.container {
+  width: 300px;
+  background: #4a7580;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+#taskInput {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px;
+  background-color: #28a745;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  border: none; /* Added to remove default button border */
+}
+
+button:hover {
+  background-color: #eca31a;
+}
+
+#taskList, #completedList {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #0e0c0c;
+}
+
+.icon {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.icon:hover {
+  color: #f3f6f9;
+}
+
+/* Media Query for Any Device with a Width of 768px or Less */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  #taskInput {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px;
+  }
+
+  .icon {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
